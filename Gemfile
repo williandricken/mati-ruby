@@ -12,6 +12,8 @@ gem 'json'
 gem 'simple_form'
 gem 'net-http'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'caxlsx'
+gem 'caxlsx_rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server

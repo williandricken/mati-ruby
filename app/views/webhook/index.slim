@@ -1,15 +1,14 @@
-h3 identity verification_id #{@identity.verification_id}
-h3 identity document #{@identity.document}
-h3 identity expired #{@identity.expired}
-h3 identity flow #{@identity.flow}
-h3 identity identity #{@identity.identity}
-h3 identity input #{@identity.input}
-h3 identity metadata #{@identity.metadata}
-h3 identity step #{@identity.step}
-h3 identity device_fingerprint #{@identity.device_fingerprint}
-h3 identity has_problem #{@identity.has_problem}
+h1 Last Webhook Data
+
+h3 Identity #{@identity.identity}
+h3 Identity verification_id #{@identity.verification_id}
 
 br
 br
 
-h3 = @webhook.data
+- @webhook.data.split(",").each do |part|
+  p = part
+
+
+= link_to index_mati_path, class: "btn btn-warning"
+  | Home

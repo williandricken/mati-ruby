@@ -1,6 +1,0 @@
-= simple_form_for :inputs, url: @url do |f|
-  = f.input :document_name, as: :radio_buttons, collection: [['national-id', 'National ID'], ['passport', 'Passport'], ['driving-license', 'Driving License'], ['proof-of-residency', 'Proof of Residency']], label_method: :second, value_method: :first
-  = f.input :document_front, as: :file
-  = f.input :document_back, as: :file
-  = f.input :selfie_photo, as: :file
-  = f.button :submit, "Salvar",  class: "btn btn-success"

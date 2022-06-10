@@ -1,3 +1,7 @@
-h1 Document Form
+h1 =@welcome
 
-= render 'form'
+= link_to identities_path, class: "btn btn-warning"
+  | List of Identities
+br
+= link_to index_webhook_path, class: "btn btn-warning"
+  | Last Webhook Data

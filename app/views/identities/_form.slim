@@ -1,0 +1,8 @@
+= simple_form_for :inputs, url: @url do |f|
+
+  = f.hidden_field :step, value: @step
+  = f.hidden_field :document_type, value: @document_type
+  = f.hidden_field :input_type, value: @input_type
+
+  = f.input :document_file, as: :file
+  = f.button :submit, "Send document",  class: "btn btn-success"

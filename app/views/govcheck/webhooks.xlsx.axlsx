@@ -1,0 +1,11 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Webhooks") do |sheet|
+  @customers.each do |customer|
+    if customer.govwebhooks.count > 0
+      data = customer.govwebhooks.last.data
+    else
+      data = "Not found or does not match information provided"
+    end
+    sheet.add_row [customer.user, customer.phone, customer.bvn, customer.bvn_name, customer.bvn_phone, customer.bvn_dob, data]
+  end
+end

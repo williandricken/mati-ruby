@@ -1,0 +1,22 @@
+p verification_id ---- #{@identity.verification_id}
+p document ---- #{@identity.document}
+p expired ---- #{@identity.expired}
+p flow ---- #{@identity.flow}
+p identity ---- #{@identity.identity}
+p input ---- #{@identity.input}
+p metadata ---- #{@identity.metadata}
+p step ---- #{@identity.step}
+p device_fingerprint ---- #{@identity.device_fingerprint}
+p has_problem ---- #{@identity.has_problem}
+
+br
+
+  - @identity.webhooks.each do |webhook|
+    - webhook.data.split(",").each do |part|
+      p = part
+    br
+
+= link_to 'Back', identities_path
+br
+= link_to index_mati_path, class: "btn btn-warning"
+  | Home
